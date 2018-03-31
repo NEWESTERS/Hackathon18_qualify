@@ -1,3 +1,43 @@
+body {
+	width: 100%;
+	margin: auto;
+}
+
+.title {
+	opacity: 0;
+	height: 20%;
+	display: flex;
+	flex-direction: column;
+	animation: fadeout 2s forwards ease;
+	animation-delay: 1s;
+}
+
+.title>h1 {
+	margin-top: 30px;
+	animation: wiggle 3s infinite ease;
+}
+
+@keyframes wiggle {
+    0%, 50% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(.2, .25, .55, 1)
+    }
+
+    25% {
+        transform: translateY(-7px);
+        animation-timing-function: cubic-bezier(.45, 0, .8, .75)
+    }
+
+    75% {
+        transform: translateY(7px);
+        animation-timing-function: cubic-bezier(.45, 0, .8, .75)
+    }
+
+    to {
+        transform: translateY(0)
+    }
+}
+
 .guys {
 	display: flex;
 	justify-content: center;
@@ -8,7 +48,8 @@
 .guy {
 	position: absolute;
 	width: auto;
-	height: 75%;
+	height: 80%;
+	animation: fadeout 2s forwards ease;
 }
 
 @media screen(max-width: 768px) {
@@ -20,19 +61,16 @@
 
 .first {
 	opacity: 0;
-	animation: fadeout 2s forwards ease;
 }
 
 .second {
 	opacity: 0;
-	animation: fadeout 2s forwards ease;
-	animation-delay: 1s;
+	animation-delay: .75s;
 }
 
 .third {
 	opacity: 0;
-	animation: fadeout 2s forwards ease;
-	animation-delay: 2s;
+	animation-delay: 1.5s;
 }
 
 @keyframes fadeout {
@@ -45,15 +83,31 @@
 }
 
 .main {
-	height: 75vh;
+	background-color: #fafafa;
+	height: 100vh;
 }
 
 .info {
-	background-color: #eeeeee;
+	background-color: #222;
 	height: 200px;
-	box-shadow: 0px -5px 2px rgba(0,0,0,0.15);
+	box-shadow: 0px -3px 2px rgba(0,0,0,0.1);
 }
 
 h1 {
 	margin: auto;
+	text-align: center;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 100;
+	font-size: 7em;
 }
+
+h3 {
+	margin: auto;
+	text-align: center;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 100;
+	font-size: 3em;
+	color: white;	
+}
+
+
