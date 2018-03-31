@@ -1,0 +1,59 @@
+.guys {
+	display: flex;
+	justify-content: center;
+	width: 80%;
+	margin: auto;
+}
+
+.guy {
+	position: absolute;
+	width: auto;
+	height: 75%;
+}
+
+@media screen(max-width: 768px) {
+	.guy {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.first {
+	opacity: 0;
+	animation: fadeout 2s forwards ease;
+}
+
+.second {
+	opacity: 0;
+	animation: fadeout 2s forwards ease;
+	animation-delay: 1s;
+}
+
+.third {
+	opacity: 0;
+	animation: fadeout 2s forwards ease;
+	animation-delay: 2s;
+}
+
+@keyframes fadeout {
+	0% {	opacity: 0;	}
+	100% {	opacity: 1;	}
+}
+
+.container {
+	width: 100%;
+}
+
+.main {
+	height: 75vh;
+}
+
+.info {
+	background-color: #eeeeee;
+	height: 200px;
+	box-shadow: 0px -5px 2px rgba(0,0,0,0.15);
+}
+
+h1 {
+	margin: auto;
+}
