@@ -3,6 +3,20 @@ body {
 	margin: auto;
 }
 
+/* Контейнер, преставляющий секцию сайта */
+.container {
+	width: 100%;
+	height:100vh;
+	overflow: hidden;
+}
+
+/* Основной контейнер */
+.main {
+	background-color: #fafafa;
+	height: 100vh;
+}
+
+/* Заголовок */
 .title {
 	opacity: 0;
 	height: 20%;
@@ -15,6 +29,14 @@ body {
 .title>h1 {
 	margin-top: 30px;
 	animation: wiggle 3s infinite ease;
+}
+
+h1 {
+	margin: auto;
+	text-align: center;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 100;
+	font-size: 7em;
 }
 
 @keyframes wiggle {
@@ -38,8 +60,8 @@ body {
     }
 }
 
+/* Картинки в основном контейнере */
 .guys {
-	overflow: hidden;
 	display: flex;
 	justify-content: center;
 	width: 80%;
@@ -60,7 +82,38 @@ body {
 		width: 100%;
 		height: auto;
 	}
+
+	.second, .third {
+		display: none;
+	}
 }
+
+/* epic blur 
+
+.first {
+	filter: blur(5px);
+	transition: 1.5s all;
+}
+
+.first:hover {
+	filter: blur(0px);
+}
+
+.second {
+	filter: blur(0px);
+	transition: 1.5s all;
+}
+
+.third {
+	filter: blur(0px);
+	transition: .75s all;
+}
+
+.guys:hover>.second, .guys:hover>.third {
+	filter: blur(5px);
+}
+
+ epic blur */
 
 .second {
 	animation-delay: .75s;
@@ -74,11 +127,13 @@ body {
 	0% {
 		transform: translateY(20px);
 		opacity: 0;
+		filter: blur(10px);
 	}
 
 	100% {
 		opacity: 1;
 		transform: translateY(2px);
+		filter: blur(0px);
 	}
 }
 
@@ -94,56 +149,39 @@ body {
 	}
 }
 
-.container {
-	width: 100%;
-	height:100vh;
-}
-
-.main {
-	background-color: #fafafa;
-	height: 100vh;
-}
-
-h1 {
-	margin: auto;
-	text-align: center;
-	font-family: 'Work Sans', sans-serif;
-	font-weight: 100;
-	font-size: 7em;
-}
-
-#portfolio{
+/* Контейнер с информацией об участниках команды */
+#portfolio {
 	z-index: 2;
-	/*box-shadow: 0px -3px 2px rgba(0,0,0,0.1);*/
+	box-shadow: 0px -3px 2px rgba(0,0,0,0.5);
 	background-color: #222;
 	display: none;
 	min-width:  100%;
 }
 
-#portfolio[shown = 'yes']{
+#portfolio[shown = 'yes'] {
 	display: flex;
-	opacity: 0.7 ; 
+	opacity: 0.7; 
 }
 
-.upper{
+.upper {
 	background: red;
 	width: 10%;
-	opacity: 0.9 ;
+	opacity: 0.9;
 }
 
-.middler{
+.middler {
 	display: flex;
 	flex-direction: column;
 	width:80%;
 }
 
-.downer{
+.downer {
 	background: blue;
 	width: 10%;
-	opacity: 0.9 ;
+	opacity: 0.9;
 }
 
-.header-portf{
+.header-portf {
 	display: flex;
 	flex-direction: row;
 	height: 30vh;
@@ -151,39 +189,38 @@ h1 {
 	opacity: 0;
 }
 
-#portfolio[shown = 'yes'] .header-portf{
+#portfolio[shown = 'yes'] .header-portf {
 	animation: fadein 1.5s forwards ease;
 	animation-delay: 0s; 
 }
 
-.imageholder{
+.imageholder {
 	width: 30%;
 	background: #f12f00;
 }
 
-.namewrapper{
+.namewrapper {
 	width: 70%;
 	background: #ff1100;
 }
 
-.content{
+.content {
 	width: 100;
-	height:70vh;
-	color:red;
-	opacity: 0;
-	
+	height: 70vh;
+	color: red;
+	opacity: 0;	
 }
 
-#portfolio[shown = 'yes'] .content{
+#portfolio[shown = 'yes'] .content {
 	animation: fadein 1.5s forwards ease;
 	animation-delay: 0.5s;
 }
 
-.clicker{
+.clicker {
 	opacity: 0;
 }
 
-.clicker:hover{
+.clicker:hover {
 	opacity: 0.8;
 }
 
