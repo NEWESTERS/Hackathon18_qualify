@@ -90,19 +90,6 @@ body {
 	height: 100vh;
 }
 
-.info {
-	background-color: #222;
-	height: 200px;
-	box-shadow: 0px -3px 2px rgba(0,0,0,0.1);
-	height: 70vh;
-}
-
-.info {
-	background-color: #eeeeee;
-	height: 30vh;
-	box-shadow: 0px -5px 2px rgba(0,0,0,0.15);
-}
-
 h1 {
 	margin: auto;
 	text-align: center;
@@ -112,9 +99,12 @@ h1 {
 }
 
 #portfolio{
+	box-shadow: 0px -3px 2px rgba(0,0,0,0.1);
+	background-color: #222;
 	display: none;
 	min-width:  100%;
 }
+
 #portfolio[shown = 'yes']{
 	display: flex;
 	opacity: 0.7 ; 
@@ -125,16 +115,19 @@ h1 {
 	width: 10%;
 	opacity: 0.9 ;
 }
+
 .middler{
 	display: flex;
 	flex-direction: column;
 	width:80%;
 }
+
 .downer{
 	background: blue;
 	width: 10%;
 	opacity: 0.9 ;
 }
+
 .header-portf{
 	display: flex;
 	flex-direction: row;
@@ -142,18 +135,22 @@ h1 {
 	width: 100%;
 	opacity: 0;
 }
-.portfolio[shown = 'yes'] .header-portf{
+
+#portfolio[shown = 'yes'] .header-portf{
 	animation: fadeout 1s forwards ease;
 	animation-delay: 0s; 
 }
+
 .imageholder{
 	width: 30%;
 	background: #f12f00;
 }
+
 .namewrapper{
 	width: 70%;
 	background: #ff1100;
 }
+
 .content{
 	width: 100;
 	color:red;
@@ -161,13 +158,15 @@ h1 {
 	
 }
 
-.portfolio[shown = 'yes'] .content{
+#portfolio[shown = 'yes'] .content{
 	animation: fadeout 1s forwards ease;
 	animation-delay: 1s;
 }
+
 .clicker{
 	opacity: 0;
 }
+
 .clicker:hover{
 	opacity: 0.8;
 }
