@@ -1,5 +1,5 @@
 function portfolioOnload( link ) {
-			var element = document.getElementById(link);
+			var element = document.getElementsByClassName(link)[0];
 		
 			
 			this.show_block = function () {
