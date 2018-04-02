@@ -2,11 +2,16 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>S06a4k@</title>
-	<link href="https://fonts.googleapis.com/css?family=Work+Sans:100,400,700" rel="stylesheet">
+	<title>C06A4KA</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Work+Sans:100" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript" src="personal_inf.js"></script>
+	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+
 	<script src="https://code.jquery.com/jquery-1.8.3.js"></script>
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="data.js"></script>
 </head>
 <body>
 	<div class="container main">
@@ -21,9 +26,34 @@
 			<img src="img/Middle.png" alt="" class="guy first" id="clickme">
 		</div>
 	</div>
-	<div class="container portfolio" id="portfolio">
-		<div class="portfolio clicker upper"></div>
-		<div class ="portfolio middler">
+
+	<div class="container" id="team">
+		<div class="title" data-aos="fade-up">
+			<h1>Состав команды</h1>
+		</div>
+		<img src="img/Left_Arrow.png" alt="" class="arrow" id="left-arrow">
+		<div class="content" id="info">
+			<div class="row">
+				<img src="img/Mini_avatar.png" alt="" id="avatar" data-aos="fade-right">
+				<div id="name" data-aos="fade-left">
+					<h2>Василий Пупкин</h2>
+				</div>				
+			</div>
+			<div class="row">
+				<div id="skills" data-aos="fade-left">
+					<div class="skill">Плейбой</div>
+					<div class="skill">Миллионер</div>
+					<div class="skill">Филантроп</div>
+				</div>
+				<div id="bio" data-aos="zoom-in">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium quibusdam vero, autem ab velit adipisci aspernatur voluptatum officia est debitis dolor reprehenderit laudantium, rem dolore dolorem minus porro dicta dolorum!</div>
+			</div>			
+		</div>
+		<img src="img/Right_Arrow.png" alt="" class="arrow" id="right-arrow">
+	</div>
+	<!--
+	<div class="container" id="portfolio">
+		<div class="clicker upper"></div>
+		<div class ="middler">
 			<div class = "header-portf">
 				<div class="header-portf imageholder"></div>
 				<div class="header-portf namewrapper">
@@ -34,7 +64,8 @@
 			<div class="content main">ewdewdwexwexwexewxewxe<br>wxewxewxxwexwexwexewxwexewxwexwexwecervnrvnjgevjhgv
 			vsdfvdfhsbvfdsvjdsfnvjkdnvkjdfnvkjdsnvkjndvndfkvndfvndfnvkjdnvkjdfsv</div>
 		</div>
-		<div class="portfolio clicker downer"></div>
-	</div>		
+		<div class="clicker downer"></div>
+	</div>	
+	-->	
 </body>
 </html>
