@@ -5,6 +5,10 @@ window.onload = function() {
 		function update(number) {
 			$('#bio').text(data[number].bio);
 			$('#name').html('<h2>' + data[number].name + '</h2>');
+			$('#skills').empty();
+			for (var i = data[number].skills.length - 1; i >= 0; i--) {
+				$('#skills').append('<div class="skill">' + data[number].skills[i] + '</div>')
+			}
 		}
 
 		this.next = function() {
