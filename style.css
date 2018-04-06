@@ -10,7 +10,7 @@ body {
 }
 
 /* Основной контейнер */
-.main {
+#main {
 	background: linear-gradient(0deg, #BBB, #FFF);
 	height: 100vh;
 }
@@ -21,14 +21,14 @@ body {
 	flex-direction: column;
 }
 
-.main>.title {
+#main>.title {
 	height: 20%;
 	opacity: 0;
 	animation: fadeout 2s forwards ease;
 	animation-delay: 1s;
 }
 
-.main>.title>h1 {
+#main>.title>h1 {
 	margin-top: 30px;
 	animation: wiggle 3s infinite ease;
 	margin: auto;
@@ -66,8 +66,7 @@ body {
 	display: flex;
 	justify-content: center;
 	width: 80%;
-	margin: auto;
-}
+	margin: auto;}
 
 .guy {
 	opacity: 0;
@@ -77,6 +76,7 @@ body {
 	animation: fadeout 2s forwards ease;
 }
 
+/* Стили для мобильных устройств */
 @media screen and (max-width: 768px) and (orientation: portrait) {
 	.guy {
 		width: 100%;
@@ -90,7 +90,7 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-	h1 {
+	#main>.title>h1 {
 		font-size: 4em !important;
 	}
 }
@@ -122,7 +122,7 @@ body {
 #team {
 	background: linear-gradient(0deg, #666, #111);
 	box-shadow: 0px -3px 2px rgba(0,0,0,0.5);
-	min-height: 768px;
+	min-height: 100vh;
 	padding-bottom: 40px;
 }
 
@@ -193,7 +193,7 @@ body {
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
-	font-size: 4em;
+	font-size: 3.5em;
 	color: #FAFAFA;	
 	text-shadow: 0px 0px 5px black;
 }
@@ -227,9 +227,24 @@ body {
 	text-shadow: 0px 0px 5px black;
 }
 
+/* Стили для мобильных устройств */
 @media screen and (max-width: 768px) and (orientation: portrait) {
 	#name>h2 {
 		font-size: 1.5em;
+	}
+
+	#team>.title>h1 {
+		font-size: 2.5em;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#team>.title {
+		margin-bottom: 0;
+	}
+
+	#team>.title>h1 {
+		font-size: 3.5em;
 	}
 
 	#avatar {
@@ -241,8 +256,20 @@ body {
 		font-size: 1em;
 	}
 
+	#skills {
+		width: 100%;
+	}
+
 	#bio {
+		width: 100%;
 		font-size: 1em;
+		margin-top: 20px;
+		padding: 0;
+	}
+
+	.content>.body {
+		margin: 0;
+		flex-direction: column;
 	}
 }
 
@@ -252,14 +279,6 @@ body {
 	flex-direction: column;
 	background: linear-gradient(0deg, #FFF, #BBB);
 	height: 300px;
-}
-
-/* Костыль для отображения тени с верхнего блока */
-.shadow {
-	box-shadow: 0px 3px 2px rgba(0,0,0,0.75);
-	width: 100%;
-	height: 1px;
-	margin-top: -2px;
 }
 
 #quote>.title {
@@ -273,6 +292,26 @@ body {
 	font-size: 5em;	
 }
 
+/* Костыль для отображения тени с блока о команде */
+.shadow {
+	box-shadow: 0px 3px 2px rgba(0,0,0,0.75);
+	width: 100%;
+	height: 1px;
+	margin-top: -2px;
+}
+
+/* Стили для мобильных устройств */
+@media screen and (max-width: 768px) {
+	#quote {
+		height: 200px;
+	}
+
+	#quote>.title>h1 {
+		font-size: 3em;
+	}
+}
+
+/* Подвал сайта */
 #footer {
 	background: linear-gradient(0deg, #444, #666);
 	box-shadow: 0px -3px 2px rgba(0,0,0,0.5);

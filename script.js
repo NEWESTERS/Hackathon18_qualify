@@ -1,4 +1,22 @@
+// Обработка бага с vh на мобильных устройствах
+function resize() {
+	$('#main').css('height', window.innerHeight);
+}
+
+// При изменении ориентации размер блока пересчитывается
+window.addEventListener("orientationchange", function() {
+	resize();
+}, false);
+
 window.onload = function() {
+	resize();
+
+	// Предзагрузка фотографий
+	for (var i = 0; i < data.length; i++) {
+		new Image().src = data[i].photo;
+	}
+
+	// Объект, осуществляющий перелистывание страниц
 	var pager = new function() {
 		var number = 0;
 
@@ -8,7 +26,7 @@ window.onload = function() {
 			$('#bio').text(data[number].bio);
 			$('#name').html('<h2>' + data[number].name + '</h2>');
 			$('#skills').empty();
-			for (var i = data[number].skills.length - 1; i >= 0; i--) {
+			for (var i = 0; i < data[number].skills.length; i++) {
 				$('#skills').append('<div class="skill">' + data[number].skills[i] + '</div>')
 			}
 		}
@@ -49,6 +67,7 @@ window.onload = function() {
 			$('#info').css('margin-right', '0');
 			$('#info').css('margin-left', '0');
 		});
+
 		$('#info').animate({
 			opacity: 1
 		}, 300);
@@ -66,12 +85,13 @@ window.onload = function() {
 			$('#info').css('margin-left', '0');
 			$('#info').css('margin-right', '0');
 		});
+
 		$('#info').animate({
 			opacity: 1
 		}, 300);
 	})
 	
-};	
+};
 
 
 
