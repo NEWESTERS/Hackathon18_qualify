@@ -4,6 +4,7 @@ window.onload = function() {
 
 		// Функция, обновляющая данные об участнике
 		function update(number) {
+			$('#avatar').attr('src', data[number].photo);
 			$('#bio').text(data[number].bio);
 			$('#name').html('<h2>' + data[number].name + '</h2>');
 			$('#skills').empty();
@@ -38,16 +39,7 @@ window.onload = function() {
 	});
 
 	// Клик на стрелку влево
-	$(document).on('click', '#left-arrow', function() {
-		/*
-		$('#info').addClass('scroll-left-begin');
-		setTimeout(function() {
-			pager.back();
-			$('#info').removeClass('scroll-left-begin');
-			$('#info').addClass('scroll-left-end');
-		}, 250);
-		*/
-		
+	$(document).on('click', '#left-arrow', function() {		
 		$('#info').animate({
 			'margin-right': '+=100px',
 			'margin-left': '-=100px',
